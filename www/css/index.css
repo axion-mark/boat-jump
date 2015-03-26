@@ -143,3 +143,9 @@ body {
 	background-position: left bottom;
 	z-index: 100;
 }
+.sprite {
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	display: inline-block;
+}
