@@ -145,7 +145,7 @@ body {
 }
 .sprite {
 	position: absolute;
-	top: 50%;
+	bottom: 40%;
 	left: 10%;
 	display: inline-block;
 	z-index: 150;
