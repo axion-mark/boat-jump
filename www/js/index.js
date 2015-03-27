@@ -87,6 +87,6 @@ jQuery(document).ready(function($) {
 	}*/
 	var element = document.getElementById("stage");
 	Hammer(element).on("swipeup", function() {
-		jump();
+		alert('meow');
 	});
 });
