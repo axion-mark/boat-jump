@@ -65,6 +65,7 @@ function addObstacle() {
 }
 
 function jump() {
+	alert('meow');
 	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
 	    bottom: "+=70"
