@@ -47,3 +47,44 @@ var app = {
         console.log('Received Event: ' + id);
     }*/
 };
+
+function randsort(range) {
+    for (var i = 0; i < 1; i++) {
+        var n = Math.floor(Math.random()*range);
+        o = n+1;
+    }
+    return o;
+}
+
+function addObstacle() {
+	var obstacle = randsort(14);
+	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
+	$('.obstacle').animate({
+		right: "+=1000"
+	}, 10000, "linear");
+}
+
+function jump() {
+	$('.sprite').stop(true, false).removeClass('stationary');
+	$('.sprite').animate({
+	    bottom: "+=70"
+	}, 200, function() {
+	    $('.sprite').animate({
+		    top: "-=70"
+		}, 200);
+	});
+}
+
+
+jQuery(document).ready(function($) {
+	/*window.setInterval(function() {   // need to
+		alive();                      // find a
+	}, 10);                          // better way (super glitchy) 
+	window.setInterval(function() {
+		if($('.sprite').hasClass('stationary')) {} else {
+			addObstacle();
+		}
+	}, 1750);*/
+	var stage = document.getElementById("stage");
+	stage.addEventListener('touchstart', jump, false);
+});
