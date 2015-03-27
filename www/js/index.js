@@ -61,12 +61,16 @@ function jump() {
 	    bottom: "+=70px"
 	}, 200, function() {
 	    $('.sprite').animate({
-		    top: "-=70px"
+		    bottom: "-=70px"
 		}, 200);
 	});
 }
 
 jQuery(document).ready(function($) {
+	var stageHeight = $('.stage').height();
+	//var spritePosition = $('.sprite').position();
+	var bottomPosition = stageHeight * .36;
+	$('.sprite').css('bottom', bottomPosition);
 	/*window.setInterval(function() {   // need to
 		alive();                      // find a
 	}, 10);                          // better way (super glitchy) 
