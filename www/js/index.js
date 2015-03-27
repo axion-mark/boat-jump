@@ -81,12 +81,8 @@ jQuery(document).ready(function($) {
 			addObstacle();
 		}
 	}, 1750);*/
-	/*var stage = document.getElementById("stage");
+	var stage = document.getElementById("stage");
 	if ($('.sprite').hasClass('animating')) {} else {
 		stage.addEventListener('touchstart', jump, false);
-	}*/
-	var element = document.getElementById("stage");
-	Hammer(element).on("swipeup", function() {
-		alert('meow');
-	});
+	}
 });
