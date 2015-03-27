@@ -59,13 +59,14 @@ function addObstacle() {
 }
 
 function jump() {
+	$('.sprite').hide();
 	alert('meow');
-	$('.sprite').animate({
+	/*$('.sprite').animate({
 		opacity: 0.25
 	    //bottom: "+=70"
 	}, 200, function() {
 	    $('.sprite').animate({
 		    top: "-=70"
 		}, 200);
-	});
+	});*/
 }
