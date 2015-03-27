@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 		}
 	}, 1750);*/
 	var stage = document.getElementById("stage");
-	if (!$('.sprite').hasClass('animating')) {
+	if ($('.sprite').hasClass('animating')) {} else {
 		stage.addEventListener('touchstart', jump, false);
 	}
 });
