@@ -62,7 +62,8 @@ function jump() {
 	alert('meow');
 	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
-	    bottom: "+=70"
+		opacity: 0.25
+	    //bottom: "+=70"
 	}, 200, function() {
 	    $('.sprite').animate({
 		    top: "-=70"
