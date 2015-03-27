@@ -37,14 +37,15 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+		alert('meow');
+        /*var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        console.log('Received Event: ' + id);*/
     }
 };
 
@@ -78,6 +79,7 @@ function jump() {
 
 
 jQuery(document).ready(function($) {
+	alert('meow');
 	/*window.setInterval(function() {   // need to
 		alive();                      // find a
 	}, 10);                          // better way (super glitchy) 
