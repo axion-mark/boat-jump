@@ -60,7 +60,6 @@ function addObstacle() {
 
 function jump() {
 	alert('meow');
-	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
 		opacity: 0.25
 	    //bottom: "+=70"
