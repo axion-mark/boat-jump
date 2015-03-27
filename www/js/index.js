@@ -37,8 +37,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		var stage = document.getElementById("stage");
-		stage.addEventListener('touchstart', jump, false);
     }
 };
 
@@ -59,14 +57,24 @@ function addObstacle() {
 }
 
 function jump() {
-	$('.sprite').hide();
-	alert('meow');
-	/*$('.sprite').animate({
-		opacity: 0.25
-	    //bottom: "+=70"
+	$('.sprite').animate({
+	    bottom: "+=70"
 	}, 200, function() {
 	    $('.sprite').animate({
 		    top: "-=70"
 		}, 200);
-	});*/
+	});
 }
+
+jQuery(document).ready(function($) {
+	/*window.setInterval(function() {   // need to
+		alive();                      // find a
+	}, 10);                          // better way (super glitchy) 
+	window.setInterval(function() {
+		if($('.sprite').hasClass('stationary')) {} else {
+			addObstacle();
+		}
+	}, 1750);*/
+	var stage = document.getElementById("stage");
+	stage.addEventListener('touchstart', jump, false);
+});
