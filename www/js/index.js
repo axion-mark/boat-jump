@@ -57,12 +57,14 @@ function addObstacle() {
 }
 
 function jump() {
-	$('.sprite').animate({
+	$('.sprite').addClass('animating').animate({
 	    bottom: "+=120px"
 	}, 200, function() {
 	    $('.sprite').animate({
 		    bottom: "-=120px"
-		}, 200);
+		}, 200, function() {
+			$(this).removeClass('animating');
+		});
 	});
 }
 
@@ -80,5 +82,7 @@ jQuery(document).ready(function($) {
 		}
 	}, 1750);*/
 	var stage = document.getElementById("stage");
-	stage.addEventListener('touchstart', jump, false);
+	if (!$('.sprite').hasClass('animating')) {
+		stage.addEventListener('touchstart', jump, false);
+	}
 });
