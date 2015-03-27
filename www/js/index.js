@@ -63,7 +63,7 @@ function jump() {
 	    $('.sprite').animate({
 		    bottom: "-=120px"
 		}, 200, function() {
-			$(this).removeClass('animating');
+			//$(this).removeClass('animating');
 		});
 	});
 }
