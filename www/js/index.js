@@ -37,15 +37,8 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-		alert('meow');
-        /*var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);*/
+		var stage = document.getElementById("stage");
+		stage.addEventListener('touchstart', jump, false);
     }
 };
 
@@ -76,18 +69,3 @@ function jump() {
 		}, 200);
 	});
 }
-
-
-jQuery(document).ready(function($) {
-	alert('meow');
-	/*window.setInterval(function() {   // need to
-		alive();                      // find a
-	}, 10);                          // better way (super glitchy) 
-	window.setInterval(function() {
-		if($('.sprite').hasClass('stationary')) {} else {
-			addObstacle();
-		}
-	}, 1750);*/
-	var stage = document.getElementById("stage");
-	stage.addEventListener('touchstart', jump, false);
-});
