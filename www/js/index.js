@@ -58,10 +58,10 @@ function addObstacle() {
 
 function jump() {
 	$('.sprite').animate({
-	    bottom: "+=70"
+	    bottom: "+=70px"
 	}, 200, function() {
 	    $('.sprite').animate({
-		    top: "-=70"
+		    top: "-=70px"
 		}, 200);
 	});
 }
