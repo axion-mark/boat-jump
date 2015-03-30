@@ -58,13 +58,13 @@ function addObstacle() {
 
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
-		$('.sprite').addClass('animating').animate({
+		$('.sprite').removeClass('floating').addClass('animating').animate({
 		    bottom: "+=120px"
 		}, 300, function() {
 		    $('.sprite').animate({
 			    bottom: "-=120px"
 			}, 200, 'linear', function() {
-				$(this).removeClass('animating');
+				$(this).removeClass('animating').addClass('floating');
 			});
 		});
 	}
