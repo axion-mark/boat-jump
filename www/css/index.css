@@ -162,48 +162,59 @@ body {
 	left: 0;
 	z-index: 2000;
 }
+
 .floating {
-	animation: float 3s infinite;
+	/*-webkit-animation: float 1s infinite;
+	-moz-animation: float 1s infinite;
+	-o-animation: float 1s infinite;
+	animation: float 1s infinite;*/
+	-webkit-animation-name: float;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-name: float;
+	-moz-animation-duration: 1.5s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: normal;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 0.5s;
+	-o-animation-name: float;
+	-o-animation-duration: 1.5s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction: normal;
+	-o-animation-timing-function: ease-out;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: 0.5s;
+	animation-name: float;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: 0.5s;
+}
+@-webkit-keyframes float {
+	0%    { padding-bottom: 0px; }
+	50%   { padding-bottom: 10px; }
+	100%  { padding-bottom: 0px; }
+}
+@-moz-keyframes float {
+	0%    { padding-bottom: 0px; }
+	50%   { padding-bottom: 10px; }
+	100%  { padding-bottom: 0px; }
+}
+@-o-keyframes float {
+	0%    { padding-bottom: 0px; }
+	50%   { padding-bottom: 10px; }
+	100%  { padding-bottom: 0px; }
 }
 @keyframes float {
 	0%    { padding-bottom: 0px; }
-	60%   { padding-bottom: 20px; }
+	50%   { padding-bottom: 10px; }
 	100%  { padding-bottom: 0px; }
 }
 
-
-
-.polling_message {
-  color:white;
-  float:left;
-  margin-right:2%;            
-}
-
-.view_port {
-  background-color:black;
-  height:25px;
-  width:100%;
-  overflow: hidden;
-}
-
-.cylon_eye {
-  color:white;
-  height: 100%;
-  width: 20%;
-
-  background-color: red;
-  background-image: -webkit-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:    -moz-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:      -o-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
-
-  -webkit-animation: move_eye 4s linear 0s infinite alternate;
-     -moz-animation: move_eye 4s linear 0s infinite alternate;
-       -o-animation: move_eye 4s linear 0s infinite alternate;
-          animation: move_eye 4s linear 0s infinite alternate;
-}
-
-@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
-        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
