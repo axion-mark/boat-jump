@@ -59,16 +59,31 @@ function addObstacle() {
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
-		    bottom: "+=100px"
+		    bottom: '+=100px'
 		}, 300, 'easeOutCubic', function() {
 		    $('.sprite').animate({
-			    bottom: "-=100px"
+			    bottom: '-=100px'
 			}, 200, 'easeInQuad', function() {
 				$(this).addClass('floating').removeClass('animating');
 			});
 		});
 	}
 }
+
+function tube() {
+	
+}
+
+var count = 0;
+window.setInterval(function(){
+	$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
+	$('#tube'+count).animate({
+		right: '+=1000px'
+	}, 5000, 'linear', function() {
+		$(this).remove();
+	});
+	count++;
+}, 10000);
 
 jQuery(document).ready(function($) {
 	var stageHeight = $('.stage').height();

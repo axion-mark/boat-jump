@@ -163,6 +163,17 @@ body {
 .sprite img {
 	max-width: 100%;
 }
+.tube {
+	position: absolute;
+	bottom: 36%;
+	right: -100px;
+	display: inline-block;
+	z-index: 150;
+	width: 40px;
+}
+.tube img {
+	max-width: 100%;
+}
 #stage {
 	position: absolute;
 	top: 0;
