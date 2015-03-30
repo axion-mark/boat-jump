@@ -63,7 +63,7 @@ function jump() {
 		}, 900, 'easeOutCubic', function() {
 		    $('.sprite').animate({
 			    bottom: "-=100px"
-			}, 600, 'easeinCubic', function() {
+			}, 600, 'easeInCubic', function() {
 				$(this).removeClass('animating').addClass('floating');
 			});
 		});
