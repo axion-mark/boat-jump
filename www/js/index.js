@@ -67,7 +67,7 @@ function jump() {
 				$(this).removeClass('animating');
 			});
 		});*/
-		$('.sprite').css('transform', 'translateY(-100px)');
+		$('.sprite').css('transform', 'translateY(-=100px)');
 	}
 }
 

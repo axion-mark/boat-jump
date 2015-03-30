@@ -173,10 +173,6 @@ body {
 }
 
 .floating {
-	/*-webkit-animation: float 1s infinite;
-	-moz-animation: float 1s infinite;
-	-o-animation: float 1s infinite;
-	animation: float 1s infinite;*/
 	-webkit-animation-name: float;
 	-webkit-animation-duration: 1.5s;
 	-webkit-animation-iteration-count: infinite;
