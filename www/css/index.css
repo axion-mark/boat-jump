@@ -150,6 +150,15 @@ body {
 	display: inline-block;
 	z-index: 150;
 	width: 90px;
+	
+	-webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
 }
 .sprite img {
 	max-width: 100%;
