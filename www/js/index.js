@@ -57,22 +57,24 @@ function addObstacle() {
 }
 
 function jump() {
-	$('.sprite').addClass('animating').animate({
-	    bottom: "+=120px"
-	}, 200, function() {
-	    $('.sprite').animate({
-		    bottom: "-=120px"
+	if ($('.sprite').hasClass('animating')) {} else {
+		$('.sprite').addClass('animating').animate({
+		    bottom: "+=120px"
 		}, 200, function() {
-			//$(this).removeClass('animating');
+		    $('.sprite').animate({
+			    bottom: "-=120px"
+			}, 200, function() {
+				$(this).removeClass('animating');
+			});
 		});
-	});
+	}
 }
 
 jQuery(document).ready(function($) {
 	var stageHeight = $('.stage').height();
-	//var spritePosition = $('.sprite').position();
 	var bottomPosition = stageHeight * .36;
 	$('.sprite').css('bottom', bottomPosition);
+	
 	/*window.setInterval(function() {   // need to
 		alive();                      // find a
 	}, 10);                          // better way (super glitchy) 
@@ -81,8 +83,12 @@ jQuery(document).ready(function($) {
 			addObstacle();
 		}
 	}, 1750);*/
+	
 	var stage = document.getElementById("stage");
-	if ($('.sprite').hasClass('animating')) {} else {
-		stage.addEventListener('touchstart', jump, false);
-	}
+	stage.addEventListener('touchstart', jump, false);
+	
+	var hammertime = new Hammer(stage);
+	hammertime.on('swipe', function(ev) {
+	    alert(ev);
+	});
 });
