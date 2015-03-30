@@ -60,10 +60,10 @@ function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
 		    bottom: "+=100px"
-		}, 300, 'easeOutSine', function() {
+		}, 900, 'easeOutSine', function() {
 		    $('.sprite').animate({
 			    bottom: "-=100px"
-			}, 200, 'linear', function() {
+			}, 600, 'linear', function() {
 				$(this).removeClass('animating').addClass('floating');
 			});
 		});
