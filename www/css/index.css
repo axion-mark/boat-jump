@@ -80,7 +80,7 @@ body {
 }
 .sprite {
 	position: absolute;
-	bottom: 36%;
+	bottom: 34%;
 	left: 10%;
 	display: inline-block;
 	z-index: 150;
@@ -100,7 +100,7 @@ body {
 }
 .tube {
 	position: absolute;
-	bottom: 37%;
+	bottom: 35%;
 	right: -100px;
 	display: inline-block;
 	z-index: 150;

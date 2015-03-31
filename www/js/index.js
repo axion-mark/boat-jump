@@ -47,7 +47,7 @@ function jump() {
 		}, 250, 'easeOutCubic', function() {
 		    $('.sprite').animate({
 			    bottom: '-=70px'
-			}, 1500, 'easeInQuad', function() {
+			}, 150, 'easeInQuad', function() {
 				$(this).addClass('floating').removeClass('animating');
 			});
 		});
