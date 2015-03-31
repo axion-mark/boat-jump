@@ -200,20 +200,20 @@ body {
 	animation-delay: 0s;
 }
 @-webkit-keyframes flow {
-	0%    { background-position: left top; }
-	100%  { background-position: left -1500px top; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -1500px; }
 }
 @-moz-keyframes flow {
-	0%    { background-position: left top; }
-	100%  { background-position: left -1500px top; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -1500px; }
 }
 @-o-keyframes flow {
-	0%    { background-position: left top; }
-	100%  { background-position: left -1500px top; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -1500px; }
 }
 @keyframes flow {
-	0%    { background-position: left top; }
-	100%  { background-position: left -1500px top; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -1500px; }
 }
 
 .panning {
@@ -247,19 +247,19 @@ body {
 	animation-delay: 0s;
 }
 @-webkit-keyframes pan {
-	0%    { background-position: left bottom; }
-	100%  { background-position: left -750px bottom; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -750px; }
 }
 @-moz-keyframes pan {
-	0%    { background-position: left bottom; }
-	100%  { background-position: left -750px bottom; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -750px; }
 }
 @-o-keyframes pan {
-	0%    { background-position: left bottom; }
-	100%  { background-position: left -750px bottom; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -750px; }
 }
 @keyframes pan {
-	0%    { background-position: left bottom; }
-	100%  { background-position: left -750px bottom; }
+	0%    { background-position-x: 0px; }
+	100%  { background-position-x: -750px; }
 }
 
