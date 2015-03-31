@@ -56,15 +56,26 @@ body {
 }
 .foreground {
 	position: absolute;
-	top: 64%;
+	top: 59%;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	background: url('../img/bg-bottom.png');
 	background-color: #41c8e8;
-	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-repeat: repeat-x;
 	background-position: left top;
+	z-index: 100;
+}
+.foreground-top {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding-top: 100px;
+	margin-top: -100px;
+	background: url('../img/foreground-top.png');
+	background-repeat: repeat-x;
+	background-position: left bottom;
 	z-index: 100;
 }
 .sprite {
@@ -89,7 +100,7 @@ body {
 }
 .tube {
 	position: absolute;
-	bottom: 36%;
+	bottom: 37%;
 	right: -100px;
 	display: inline-block;
 	z-index: 150;
@@ -156,5 +167,99 @@ body {
 	0%    { padding-bottom: 0px; }
 	50%   { padding-bottom: 5px; }
 	100%  { padding-bottom: 0px; }
+}
+
+.flowing {
+	-webkit-animation-name: flow;
+	-webkit-animation-duration: 3.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0s;
+	-moz-animation-name: flow;
+	-moz-animation-duration: 3.5s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: normal;
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 0s;
+	-o-animation-name: flow;
+	-o-animation-duration: 3.5s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction: normal;
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: 0s;
+	animation-name: flow;
+	animation-duration: 3.5s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-delay: 0s;
+}
+@-webkit-keyframes flow {
+	0%    { background-position: left top; }
+	100%  { background-position: left -1500px top; }
+}
+@-moz-keyframes flow {
+	0%    { background-position: left top; }
+	100%  { background-position: left -1500px top; }
+}
+@-o-keyframes flow {
+	0%    { background-position: left top; }
+	100%  { background-position: left -1500px top; }
+}
+@keyframes flow {
+	0%    { background-position: left top; }
+	100%  { background-position: left -1500px top; }
+}
+
+.panning {
+	-webkit-animation-name: pan;
+	-webkit-animation-duration: 12s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0s;
+	-moz-animation-name: pan;
+	-moz-animation-duration: 12s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: normal;
+	-moz-animation-timing-function: linear;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 0s;
+	-o-animation-name: pan;
+	-o-animation-duration: 12s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction: normal;
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;
+	-o-animation-delay: 0s;
+	animation-name: pan;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-delay: 0s;
+}
+@-webkit-keyframes pan {
+	0%    { background-position: left bottom; }
+	100%  { background-position: left -750px bottom; }
+}
+@-moz-keyframes pan {
+	0%    { background-position: left bottom; }
+	100%  { background-position: left -750px bottom; }
+}
+@-o-keyframes pan {
+	0%    { background-position: left bottom; }
+	100%  { background-position: left -750px bottom; }
+}
+@keyframes pan {
+	0%    { background-position: left bottom; }
+	100%  { background-position: left -750px bottom; }
 }
 

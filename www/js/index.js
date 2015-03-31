@@ -40,22 +40,6 @@ var app = {
     }
 };
 
-function randsort(range) {
-    for (var i = 0; i < 1; i++) {
-        var n = Math.floor(Math.random()*range);
-        o = n+1;
-    }
-    return o;
-}
-
-function addObstacle() {
-	var obstacle = randsort(14);
-	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
-	$('.obstacle').animate({
-		right: "+=1000"
-	}, 10000, "linear");
-}
-
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
@@ -70,34 +54,31 @@ function jump() {
 	}
 }
 
-function tube() {
-	
+function randsort(range) {
+    for (var i = 0; i < 1; i++) {
+        var n = Math.floor(Math.random()*range);
+        o = n+1;
+    }
+    return o;
 }
 
 var count = 0;
 window.setInterval(function(){
-	$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
-	$('#tube'+count).animate({
-		right: '+=1000px'
-	}, 5000, 'linear', function() {
-		$(this).remove();
-	});
-	count++;
-}, 10000);
+	if (randsort(4) == 1) {
+		$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
+		$('#tube'+count).animate({
+			right: '+=3000px'
+		}, 7000, 'linear', function() {
+			$(this).remove();
+		});
+		count++;
+	}
+}, 500);
 
 jQuery(document).ready(function($) {
 	var stageHeight = $('.stage').height();
 	var bottomPosition = stageHeight * .36;
 	$('.sprite').css('bottom', bottomPosition);
-	
-	/*window.setInterval(function() {   // need to
-		alive();                      // find a
-	}, 10);                          // better way (super glitchy) 
-	window.setInterval(function() {
-		if($('.sprite').hasClass('stationary')) {} else {
-			addObstacle();
-		}
-	}, 1750);*/
 	
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
