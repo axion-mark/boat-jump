@@ -44,10 +44,10 @@ function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
 		    bottom: '+=70px'
-		}, 250, 'easeOutCubic', function() {
+		}, 300, 'easeOutCubic', function() {
 		    $('.sprite').animate({
 			    bottom: '-=70px'
-			}, 150, 'easeInQuad', function() {
+			}, 200, 'easeInQuad', function() {
 				$(this).addClass('floating').removeClass('animating');
 			});
 		});
