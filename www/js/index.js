@@ -43,11 +43,11 @@ var app = {
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
-		    bottom: '+=100px'
-		}, 300, 'easeOutCubic', function() {
+		    bottom: '+=70px'
+		}, 250, 'easeOutCubic', function() {
 		    $('.sprite').animate({
-			    bottom: '-=100px'
-			}, 200, 'easeInQuad', function() {
+			    bottom: '-=70px'
+			}, 1500, 'easeInQuad', function() {
 				$(this).addClass('floating').removeClass('animating');
 			});
 		});
