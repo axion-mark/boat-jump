@@ -77,7 +77,7 @@ window.setInterval(function(){
 
 jQuery(document).ready(function($) {
 	var stageHeight = $('.stage').height();
-	var bottomPosition = stageHeight * .36;
+	var bottomPosition = stageHeight * .335;
 	$('.sprite').css('bottom', bottomPosition);
 	
 	var stage = document.getElementById("stage");

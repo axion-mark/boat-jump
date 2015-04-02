@@ -80,7 +80,7 @@ body {
 }
 .sprite {
 	position: absolute;
-	bottom: 32%;
+	bottom: 30%;
 	left: 10%;
 	display: inline-block;
 	z-index: 150;
