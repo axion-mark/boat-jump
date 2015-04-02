@@ -75,6 +75,18 @@ window.setInterval(function(){
 	}
 }, 500);
 
+window.setInterval(function(){
+	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
+	breakable.addClass('hit');
+	
+	$('.tube').each(function() {
+		if ($(this).hasClass('hit')) {
+			$(this).remove();
+			alert('hit');
+		}
+	});
+}, 10);
+
 jQuery(document).ready(function($) {
 	var stageHeight = $('.stage').height();
 	var bottomPosition = stageHeight * .335;
@@ -82,9 +94,4 @@ jQuery(document).ready(function($) {
 	
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
-	
-	var hammertime = new Hammer(stage);
-	hammertime.on('swipe', function(ev) {
-	    alert(ev);
-	});
 });
