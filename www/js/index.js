@@ -64,7 +64,7 @@ function randsort(range) {
 
 var count = 0;
 window.setInterval(function(){
-	if (randsort(4) == 1) {
+	if (randsort(3) == 1) {
 		$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
 		$('#tube'+count).animate({
 			right: '+=3000px'
@@ -73,7 +73,7 @@ window.setInterval(function(){
 		});
 		count++;
 	}
-}, 600);
+}, 800);
 
 window.setInterval(function(){
 	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
