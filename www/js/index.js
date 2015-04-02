@@ -73,7 +73,7 @@ window.setInterval(function(){
 		});
 		count++;
 	}
-}, 500);
+}, 600);
 
 window.setInterval(function(){
 	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
