@@ -43,10 +43,10 @@ var app = {
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
-		    bottom: '+=70px'
-		}, 300, 'easeOutCubic', function() {
+		    bottom: '+=80px'
+		}, 400, 'easeOutCubic', function() {
 		    $('.sprite').animate({
-			    bottom: '-=70px'
+			    bottom: '-=80px'
 			}, 200, 'easeInQuad', function() {
 				$(this).addClass('floating').removeClass('animating');
 			});
