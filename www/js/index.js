@@ -40,6 +40,8 @@ var app = {
     }
 };
 
+var gamePlaying = 0
+
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
 		$('.sprite').removeClass('floating').addClass('animating').animate({
@@ -52,6 +54,7 @@ function jump() {
 			});
 		});
 	}
+	gamePlaying = 1;
 }
 
 function randsort(range) {
@@ -64,7 +67,7 @@ function randsort(range) {
 
 var count = 0;
 window.setInterval(function(){
-	if (randsort(3) == 1) {
+	if (randsort(3) == 1 && gamePlaying == 1) {
 		$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
 		$('#tube'+count).animate({
 			right: '+=3000px'
@@ -83,6 +86,9 @@ window.setInterval(function(){
 		if ($(this).hasClass('hit')) {
 			$(this).remove();
 			alert('hit');
+			$('.foreground').removeClass('flowing');
+			$('.foreground-top').removeClass('panning');
+			gamePlaying = 0;
 		}
 	});
 }, 10);
