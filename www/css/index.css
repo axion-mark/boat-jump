@@ -139,6 +139,14 @@ body {
 	width: 100px;
 	height: 100px;
 }
+.cleared-barrier {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 5%;
+	background: #000000;
+}
 #stage {
 	position: absolute;
 	top: 0;

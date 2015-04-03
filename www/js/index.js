@@ -47,10 +47,13 @@ function start() {
 	$('.play-container').fadeOut('fast');
 	$('.foreground').addClass('flowing');
 	$('.foreground-top').addClass('panning');
+	score = 0;
+	$('.score').html(score);
 	gamePlaying = 1;
 }
 
 function end() {
+	$('.sprite').stop(true, true);
 	$('.play-container').fadeIn('fast');
 	$('.foreground').removeClass('flowing');
 	$('.foreground-top').removeClass('panning');
@@ -100,9 +103,16 @@ window.setInterval(function(){
 	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
 	breakable.addClass('hit');
 	
+	var cleared = $("#sprite").collision( ".cleared-barrier" );
+	cleared.addClass('cleared');
+	
 	$('.tube').each(function() {
 		if ($(this).hasClass('hit')) {
 			end();
+		}
+		if ($(this).hasClass('cleared')) {
+			score++;
+			$('.score').html(score);
 		}
 	});
 }, 10);
