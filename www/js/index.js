@@ -71,7 +71,7 @@ window.setInterval(function(){
 		$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
 		$('#tube'+count).animate({
 			right: '+=3000px'
-		}, 90000, 'linear', function() {
+		}, 9000, 'linear', function() {
 			$(this).remove();
 		});
 		count++;
