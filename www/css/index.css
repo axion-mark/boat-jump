@@ -146,6 +146,7 @@ body {
 	bottom: 0;
 	width: 5%;
 	background: #000000;
+	z-index: 1500;
 }
 #stage {
 	position: absolute;
