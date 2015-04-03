@@ -40,7 +40,8 @@ var app = {
     }
 };
 
-var gamePlaying = 0
+var gamePlaying = 1;
+var score = 0;
 
 function jump() {
 	if ($('.sprite').hasClass('animating')) {} else {
@@ -54,7 +55,6 @@ function jump() {
 			});
 		});
 	}
-	gamePlaying = 1;
 }
 
 function randsort(range) {
@@ -71,7 +71,7 @@ window.setInterval(function(){
 		$('.sprite').after('<div id="tube'+count+'" class="tube"><img src="img/tube.png"></div>');
 		$('#tube'+count).animate({
 			right: '+=3000px'
-		}, 9000, 'linear', function() {
+		}, 90000, 'linear', function() {
 			$(this).remove();
 		});
 		count++;
@@ -82,13 +82,23 @@ window.setInterval(function(){
 	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
 	breakable.addClass('hit');
 	
+	/*if ($('#sprite').position().left > $('.current-tube').position().left) {
+		score++;
+		$('.score').html(score);
+	}*/
+	
 	$('.tube').each(function() {
+		if ($(this).position().left > 500 && $(this).position().left < 600 && !$(this).hasClass('current-tube')) {
+			$(this).addClass('current-tube');
+		} else {
+			$(this).removeClass('current-tube');
+		}
 		if ($(this).hasClass('hit')) {
 			$(this).remove();
-			alert('hit');
 			$('.foreground').removeClass('flowing');
 			$('.foreground-top').removeClass('panning');
 			gamePlaying = 0;
+			alert('hit');
 		}
 	});
 }, 10);
