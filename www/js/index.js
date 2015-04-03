@@ -100,11 +100,13 @@ window.setInterval(function(){
 }, 800);
 
 window.setInterval(function(){
-	var cleared = $("#sprite").collision( ".cleared-barrier" );
-	cleared.addClass('cleared');
-	
 	var breakable = $("#sprite").collision( ".tube" );
 	breakable.addClass('hit');
+	
+	var cleared = $(".cleared-barrier").collision( ".tube" );
+	if (cleared.hasClass('counted')) {} else {
+		cleared.addClass('cleared');
+	}
 	
 	$('.tube').each(function() {
 		if ($(this).hasClass('hit')) {
@@ -113,6 +115,7 @@ window.setInterval(function(){
 		if ($(this).hasClass('cleared')) {
 			score++;
 			$('.score').html(score);
+			$(this).removeClass('cleared').addClass('counted');
 		}
 	});
 }, 10);
@@ -130,6 +133,9 @@ jQuery(document).ready(function($) {
 	
 	//for desktop dev only
 	/*$('body').keyup(function(e){
+	    if(e.keyCode == 13){
+		    start();
+	    }
 	    if(e.keyCode == 32){
 		    jump();
 	    }
