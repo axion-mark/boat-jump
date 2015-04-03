@@ -111,7 +111,7 @@ body {
 }
 .score {
 	position: absolute;
-	top: 40px;
+	top: 80px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -119,6 +119,25 @@ body {
 	font-size: 30px;
 	font-weight: 600;
 	color: #333;
+}
+.play-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.9); 
+	z-index: 2000;
+}
+.play-container img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 100px;
+	height: 100px;
 }
 #stage {
 	position: absolute;
