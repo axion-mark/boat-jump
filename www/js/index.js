@@ -132,13 +132,13 @@ jQuery(document).ready(function($) {
 	play.addEventListener('touchend', start, false);
 	
 	//for desktop dev only
-	/*$('body').keyup(function(e){
+	$('body').keyup(function(e){
 	    if(e.keyCode == 13){
 		    start();
 	    }
 	    if(e.keyCode == 32){
 		    jump();
 	    }
-	});*/
+	});
 		
 });
