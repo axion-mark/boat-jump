@@ -45,13 +45,20 @@ var score = 0;
 
 function start() {
 	$('.play-container').fadeOut('fast');
-	if ($('.foreground').hasClass('flowing')) {} else {
-		$('.foreground').addClass('flowing');
-	}
-	if ($('.foreground-top').hasClass('panning')) {} else {
-		$('.foreground-top').addClass('panning')
-	}
+	$('.foreground').addClass('flowing');
+	$('.foreground-top').addClass('panning');
 	gamePlaying = 1;
+}
+
+function end() {
+	$('.play-container').fadeIn('fast');
+	$('.foreground').removeClass('flowing');
+	$('.foreground-top').removeClass('panning');
+	gamePlaying = 0;
+	$('.tube').each(function() {
+		$(this).remove();
+	});
+	
 }
 
 function jump() {
@@ -95,13 +102,7 @@ window.setInterval(function(){
 	
 	$('.tube').each(function() {
 		if ($(this).hasClass('hit')) {
-			$(this).remove();
-			$('.foreground').removeClass('flowing');
-			$('.foreground-top').removeClass('panning');
-			gamePlaying = 0;
-			$('.tube').each(function() {
-				$(this).remove();
-			});
+			end();
 		}
 	});
 }, 10);
