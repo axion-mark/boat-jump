@@ -100,11 +100,11 @@ window.setInterval(function(){
 }, 800);
 
 window.setInterval(function(){
-	var breakable = $("#sprite").collision( ".tube" ); // no "as", so we get the things we collided with instead of new div's
-	breakable.addClass('hit');
-	
 	var cleared = $("#sprite").collision( ".cleared-barrier" );
 	cleared.addClass('cleared');
+	
+	var breakable = $("#sprite").collision( ".tube" );
+	breakable.addClass('hit');
 	
 	$('.tube').each(function() {
 		if ($(this).hasClass('hit')) {
