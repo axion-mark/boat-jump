@@ -55,6 +55,12 @@ function jump() {
 			});
 		});
 	}
+	if ($('.foreground').hasClass('flowing')) {} else {
+		$('.foreground').addClass('flowing');
+	}
+	if ($('.foreground-top').hasClass('panning')) {} else {
+		$('.foreground-top').addClass('panning')
+	}
 	gamePlaying = 1;
 }
 
