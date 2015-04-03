@@ -40,7 +40,7 @@ var app = {
     }
 };
 
-var gamePlaying = 1;
+var gamePlaying = 0;
 var score = 0;
 
 function jump() {
@@ -55,6 +55,7 @@ function jump() {
 			});
 		});
 	}
+	gamePlaying = 1;
 }
 
 function randsort(range) {
